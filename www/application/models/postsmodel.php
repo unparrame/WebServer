@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 
-class Postersmodel extends CI_Model {
+class Postsmodel extends CI_Model {
 	public $posterEmail;
 	public $state;
 	public $image;
