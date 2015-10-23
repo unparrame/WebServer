@@ -9,13 +9,24 @@ class Posters extends CI_Controller {
 	{
 		parent::__construct();
 
-		$this->load->model('postersmodel');
+		$this->load->model('postsmodel');
 	}
 
 	public function index()
 	{
 		$this->upload();
 	}
+
+  public function base64toimg($base64string){
+    define('UPLOAD_DIR', 'images/');
+    $input = str_replace('data:image/jpeg;base64,', '', $base64string);
+    $input = str_replace(' ', '+', $base64string);
+
+    $data = base64_decode($input);
+    $file = UPLOAD_DIR . uniqid() . '.png';
+
+    return file_put_contents($file, $data);
+  }
 
 	public function upload()
 	{
@@ -26,12 +37,15 @@ class Posters extends CI_Controller {
     header("Access-Control-Allow-Methods: GET, POST");
 		}
 		if(isset($_POST['posterEmail'])){
+      $image = $_POST['image'];
+      $this->base64toimg($image);
+
 			$data = array (
 				"posterEmail" => $_POST['posterEmail'],
-				"image" => $_POST['image'],
+				// "image" => $_POST['image'],
 			);
 			$data["state"] = 'submitted';
-			
+
 			$insert = $this->postersmodel->insert($data);
 			if($insert == true)
 			{
