@@ -34,7 +34,7 @@ class Posters extends CI_Controller {
       $image = $_POST['image'];
 
 			$data = array (
-				"posterEmail" => $_POST['posterEmail'],
+				"posterEmail" => ($_POST['posterEmail'] == '') ? 'indrawan.wilianto@gmail.com' : $_POST['posterEmail'],
 				// "image" => $_POST['image'],
 			);
 			$data["state"] = 'submitted';
