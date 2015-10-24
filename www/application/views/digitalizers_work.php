@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <!-- Bootstrap core CSS -->
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/custom.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="signin.css" rel="stylesheet">
@@ -30,63 +31,120 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <![endif]-->
     </head>
 
-    <body>
+    <body background="/assets/img/LongBackground.jpg">
+    <!-- <body> -->
+      <h1 class="container" align="center">DIJITALISASI DATA</h1>
+      <br>
 
-        <div class="container">
+        <div class="col-md-1">
+        </div>
 
-            <h1>Dijitalisasi data</h1>
-            <p>Harusnya ada gambar di sini...</p>
+        <div class="col-md-5">
+          <h2 align="center">Foto</h2><br>
+          <?php echo "<img src='/images/".$row->postId.".png' width='100%'>"?>
+        </div>
 
-            <form class="form-horizontal">
-                <fieldset>
+        <div class="col-md-5 separate">
+                <h2 align="center">Masukan Data KTP disini</h2>
+                    <br>
+                    <table class="table table-responsive">
+                      <tr>
+                        <td width='130px'><b>NIK</b></td>
+                        <td width='20px'>:</td>
+                        <td><input name="nik" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+                      <tr>
+                        <td><b>Nama</b></td>
+                        <td>:</td>
+                        <td><input name="nama" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
 
-                    <!-- Form Name -->
-                    <legend>Form Name</legend>
+                      <tr>
+                        <td><b>Jenis Kelamin</b></td>
+                        <td>:</td>
+                        <td>
+                        <label><input type="radio" name="jenis_kelamin" checked="checked" value="L" required="required"> Pria </label> &nbsp; &nbsp;
+                        <label><input type="radio" name="jenis_kelamin" value="P" required="required"> Wanita </label>
+                        <br></td>
+                      </tr>
 
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="nik">NIK</label>  
-                        <div class="col-md-4">
-                            <input id="nik" name="nik" placeholder="123456" class="form-control input-md" type="text">
-                            <span class="help-block">help</span>  
-                        </div>
-                    </div>
+                      <tr>
+                        <td><b>Alamat</b></td>
+                        <td>:</td>
+                        <td><textarea class="form-control" rows="3" name="alamat"></textarea></td>
+                      </tr>
 
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="nama">Nama</label>  
-                        <div class="col-md-4">
-                            <input id="nama" name="nama" placeholder="John Doe" class="form-control input-md" required="" type="text">
-                            <span class="help-block">help</span>  
-                        </div>
-                    </div>
+                      <tr>
+                        <td><b>Provinsi</b></td>
+                        <td>:</td>
+                        <td><input name="provinsi" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
 
-                    <!-- Multiple Radios -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="jeniskelamin">Jenis Kelamin</label>
-                        <div class="col-md-4">
-                            <div class="radio">
-                                <label for="jeniskelamin-0">
-                                    <input name="jeniskelamin" id="jeniskelamin-0" value="male" checked="checked" type="radio">
-                                    Pria
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label for="jeniskelamin-1">
-                                    <input name="jeniskelamin" id="jeniskelamin-1" value="female" type="radio">
-                                    Wanita
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+                      <tr>
+                        <td><b>Kota / Kabupaten</b></td>
+                        <td>:</td>
+                        <td><input name="kotakabupaten" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
 
-                </fieldset>
+                      <tr>
+                        <td><b>RT</b></td>
+                        <td>:</td>
+                        <td><input name="rt" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>RW</b></td>
+                        <td>:</td>
+                        <td><input name="rw" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>Kelurahan / Desa</b></td>
+                        <td>:</td>
+                        <td><input name="kelurahandesa" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>Kecamatan</b></td>
+                        <td>:</td>
+                        <td><input name="kecamatan" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>Agama</b></td>
+                        <td>:</td>
+                        <td><input name="agama" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>Status Perkawinan</b></td>
+                        <td>:</td>
+                        <td><input name="statusperkawinan" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>Pekerjaan</b></td>
+                        <td>:</td>
+                        <td><input name="pekerjaan" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                      <tr>
+                        <td><b>Kewarganegaraan</b></td>
+                        <td>:</td>
+                        <td><input name="kewarganegaraan" required="required" placeholder="" class="form-control" type="text"></td>
+                      </tr>
+
+                    </table>
+                    <br>
+
+                <!-- </fieldset> -->
                 <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit">Kirim</button>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" value="reject">Tolak</button>
 
-            </form>
-
-
+            <!-- </form> -->
+          </div>
+        <div class="col-md-1">
+        </div>
         </div> <!-- /container -->
 
 

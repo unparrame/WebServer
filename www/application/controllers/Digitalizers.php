@@ -16,7 +16,8 @@ class Digitalizers extends CI_Controller {
         } else {
             $row_number = rand(0, $query->num_rows());
             $row = $query->row($row_number);
-            $this->load->view('digitalizers_work');
+            $data['row'] = $row;
+            $this->load->view('digitalizers_work', $data);
         }
     }
 
