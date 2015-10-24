@@ -28,8 +28,11 @@ class Citizens extends CI_Controller {
     }
 
     public function detail() {
-        $nik = isset($_GET['nik']) ? $_GET['nik'] : "";
-        $data['row'] = $this->citizensmodel->getDetailPeople($nik);
+        $nik = $this->input->get('nik');        
+        $data = array(
+            'row' => $this->citizensmodel->getDetailPeople($nik),
+            'posts' => $this->citizensmodel->getHistoryPeople($nik)
+        );
         $this->load->view('citizens_view', $data);
     }
 

@@ -9,11 +9,20 @@ class Citizensmodel extends CI_Model {
         parent::__construct();
     }
 
-    public function getDetailPeople($nik){
-      $sql = "SELECT * FROM `citizens` WHERE `nik` = ?";
-      // $sql = $this->db->get_where('citizens', array('nik' => $nik), 1, 0);
-      $query = $this->db->query($sql, array($nik));
-      return $query->result();
+    public function getDetailPeople($nik) {
+        $sql = "SELECT * FROM `citizens` WHERE `nik` = ?";
+        $query = $this->db->query($sql, array($nik));
+        return $query->result();
+    }
+
+    public function getHistoryPeople($nik) {
+        $sql = "SELECT DISTINCT posts.postId, posterEmail, postTime FROM posts LEFT JOIN digitalizations ON posts.postId = digitalizations.postId AND nik='?'";
+        $query = $this->db->query($sql, array($nik));
+        $posts = array();
+        foreach ($query->result() as $row) {
+            $posts[] = $row;
+        }
+        return $posts;
     }
 
     public function chartjsAgama() {
@@ -45,7 +54,7 @@ class Citizensmodel extends CI_Model {
         }
         return $goldarahs;
     }
-    
+
     private function generateColor($label) {
         return '#' . substr(md5($label), 0, 6);
     }

@@ -138,7 +138,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </table>
             <br>
 
-            <!-- </form> -->
+            <b>Histori</b>
+            <?php foreach ($posts as $post): ?>
+            <div class="media">
+                <div class="media-left">
+                    <a href="/images/<?= $post->postId ?>.jpg">
+                        <img class="media-object" src="/images/<?= $post->postId ?>.jpg" alt="Foto formulir <?= $post->postId ?>" style="width: 100px;"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4><?= $post->posterEmail ?></h4>
+                    <p><?= $post->postTime?></p>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="col-md-3">
         </div>
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
