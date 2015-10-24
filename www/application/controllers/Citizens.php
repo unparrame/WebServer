@@ -13,7 +13,7 @@ class Citizens extends CI_Controller {
 
     public function index() {
         // $this->load->model('citizensmodel');
-        $this->db->select('nik, nama');
+        $this->db->select('nik, nama, jeniskelamin, agama, goldarah');
         $query = $this->db->get('citizens');
         $citizens = array();
         foreach($query->result() as $row) {
@@ -21,8 +21,9 @@ class Citizens extends CI_Controller {
         }
         $data = array(
             'citizens' => $citizens,
-            'chartjsAgama' => $this->citizensmodel->chartJsAgama(),
-            'chartjsJenisKelamin' => $this->citizensmodel->chartJsJenisKelamin()
+            'chartjsAgama' => $this->citizensmodel->chartjsAgama(),
+            'chartjsJenisKelamin' => $this->citizensmodel->chartjsJenisKelamin(),
+            'chartjsGolDarah' => $this->citizensmodel->chartjsGolDarah()
         );
         $this->load->view('citizens_list', $data);
     }
