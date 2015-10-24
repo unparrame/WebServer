@@ -23,7 +23,7 @@ class Posters extends CI_Controller {
     $input = str_replace(' ', '+', $base64string);
 
     $data = base64_decode($input);
-    $file = UPLOAD_DIR . $insert . '.png';
+    $file = UPLOAD_DIR . $insert . '.jpg';
 
     return file_put_contents($file, $data);
   }

@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-md-5">
             <h2 align="center">Foto</h2><br>
-            <?php echo "<img src='/images/" . $row->postId . ".png' width='100%'>" ?>
+            <?php echo "<img src='/images/" . $row->postId . ".jpg' width='100%'>" ?>
         </div>
 
         <div class="col-md-5 separate">
