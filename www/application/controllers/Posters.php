@@ -23,7 +23,7 @@ class Posters extends CI_Controller {
     $input = str_replace(' ', '+', $base64string);
 
     $data = base64_decode($input);
-    $file = UPLOAD_DIR . $insert . '.png';
+    $file = UPLOAD_DIR . $insert . '.jpg';
 
     return file_put_contents($file, $data);
   }
@@ -34,7 +34,7 @@ class Posters extends CI_Controller {
       $image = $_POST['image'];
 
 			$data = array (
-				"posterEmail" => $_POST['posterEmail'],
+				"posterEmail" => ($_POST['posterEmail'] == '') ? 'indrawan.wilianto@gmail.com' : $_POST['posterEmail'],
 				// "image" => $_POST['image'],
 			);
 			$data["state"] = 'submitted';

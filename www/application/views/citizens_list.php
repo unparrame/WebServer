@@ -43,13 +43,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <td><?= $citizen->nik ?></td>
                                     <td><?= $citizen->nama ?></td>
                                     <td>
-                                        <a href="/citizens/<?= $citizen->nik ?>">
+                                        <a href="/citizens/detail/?nik=<?= $citizen->nik ?>">
                                             <button type="button" class="btn btn-default" aria-label="Lihat Detail">
                                                 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                             </button>
                                         </a>
                                     </td>
-                                </tr>                            
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

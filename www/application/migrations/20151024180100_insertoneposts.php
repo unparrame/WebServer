@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Migration_insertoneposts extends CI_Migration {
 
     public function up() {
-        $this->db->query("INSERT INTO `ktprame`.`posts` (`postId`, `posterEmail`, `postTime`, `state`) VALUES ('990821', 'indrawan.wilianto@gmail.com',  date('Y-m-d H:i:s'), 'submitted');");
+        $this->db->query("INSERT INTO `ktprame`.`posts` (`postId`, `posterEmail`, `state`) VALUES ('990821', 'indrawan.wilianto@gmail.com', 'submitted');");
     }
 
     public function down() {

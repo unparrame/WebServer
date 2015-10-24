@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Migration_insertcitizen extends CI_Migration {
 
     public function up() {
-        $this->db->query("INSERT INTO `ktprame`.`citizens` (`nik`, `provinsi`, `kotakabupaten`, `nama`, `tempatlahir`, `tanggallahir`, `jeniskelamin`, `goldarah`, `alamat`, `rt`, `rw`, `desakel`, `kecamatan`, `agama`, `pekerjaan`, `kewarganegaraan`, `statuskawin`) VALUES ('7892298946490783', 'JAWA BARAT', 'KABUPATEN BANDUNG', 'Takitatakikato', 'BANDUNG', '1994-23-03', 'LAKI-LAKI', '-', '4789 Ford Street San Jose, CA 95113', '006', '018', 'MARGAHAYU SELATAN', 'MARGAHAYU', 'KRISTEN', 'PELAJAR/MAHASISWA', 'WNI', 'BELUM KAWIN');");
+        $this->db->query("INSERT INTO `ktprame`.`citizens` (`nik`, `provinsi`, `kotakabupaten`, `nama`, `tempatlahir`, `tanggallahir`, `jeniskelamin`, `goldarah`, `alamat`, `rt`, `rw`, `desakel`, `kecamatan`, `agama`, `pekerjaan`, `kewarganegaraan`, `statuskawin`) VALUES ('7892298946490783', 'JAWA BARAT', 'KABUPATEN BANDUNG', 'Takitatakikato', 'BANDUNG', '1994-03-23', 'LAKI-LAKI', '-', '4789 Ford Street San Jose, CA 95113', '006', '018', 'MARGAHAYU SELATAN', 'MARGAHAYU', 'KRISTEN', 'PELAJAR/MAHASISWA', 'WNI', 'BELUM KAWIN');");
 
         $this->db->query("INSERT INTO `ktprame`.`citizens` (`nik`, `provinsi`, `kotakabupaten`, `nama`, `tempatlahir`, `tanggallahir`, `jeniskelamin`, `goldarah`, `alamat`, `rt`, `rw`, `desakel`, `kecamatan`, `agama`, `pekerjaan`, `kewarganegaraan`, `statuskawin`) VALUES ('8679182319178446', 'JAWA BARAT', 'KABUPATEN PURWAKARTA', 'Jikakita', 'JAKARTA', '1994-04-08', 'PEREMPUAN', '-', '1725 Park   Boulevard Marshalltown, IA 50158', '045', '008', 'NAGRITENGAH', 'PURWAKARTA', 'ISLAM', 'PELAJAR/MAHASISWA', 'WNI', 'BELUM KAWIN');");
 

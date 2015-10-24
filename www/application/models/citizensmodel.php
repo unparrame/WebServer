@@ -9,6 +9,13 @@ class Citizensmodel extends CI_Model {
         parent::__construct();
     }
 
+    public function getDetailPeople($nik){
+      $sql = "SELECT * FROM `citizens` WHERE `nik` = ?";
+      // $sql = $this->db->get_where('citizens', array('nik' => $nik), 1, 0);
+      $query = $this->db->query($sql, array($nik));
+      return $query->result();
+    }
+
     public function chartjsAgama() {
         $query = $this->db->query("SELECT `agama` AS `label`, COUNT(`agama`) AS `value` FROM `citizens` GROUP BY `agama`;");
         $agamas = array();

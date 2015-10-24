@@ -33,7 +33,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body background="/assets/img/LongBackground.jpg">
         <br>
-
         <div class="col-md-6 form-inline">
             <div class="form-group">
                 <fieldset disabled>
@@ -42,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </fieldset>
                 <br/>
             </div>
-            <?php echo "<img src='/images/" . $row->postId . ".png' width='100%'>" ?>
+            <?php echo "<img src='/images/" . $row->postId . ".jpg' width='100%'>" ?>
         </div>
 
         <form action="/digitalizers/submit" method="POST">
