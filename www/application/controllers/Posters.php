@@ -40,7 +40,7 @@ class Posters extends CI_Controller {
 			);
 			$data["state"] = 'submitted';
 
-			$insert = $this->postersmodel->insert($data);
+			$insert = $this->postsmodel->insert($data);
 			if($insert == true)
 			{
 				$info = array(
