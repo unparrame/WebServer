@@ -52,6 +52,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </tr>
 
                     <tr>
+                      <td><b>Tempat Lahir</b></td>
+                      <td>:</td>
+                      <td><?php echo $row[0]->tempatlahir; ?></td></td>
+                    </tr>
+
+                    <tr>
+                      <td><b>Tanggal Lahir</b></td>
+                      <td>:</td>
+                      <td><?php echo $row[0]->tanggallahir; ?></td></td>
+                    </tr>
+
+                    <tr>
                       <td><b>Jenis Kelamin</b></td>
                       <td>:</td>
                       <td><?php echo $row[0]->jeniskelamin; ?></td></td>
