@@ -32,137 +32,114 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
     <body background="/assets/img/LongBackground.jpg">
-        <!-- <body> -->
-        <h1 class="container" align="center">DIJITALISASI DATA</h1>
         <br>
 
-        <div class="col-md-1">
-        </div>
-
-        <div class="col-md-5">
-            <h2 align="center">Foto</h2><br>
+        <div class="col-md-6 form-inline">
+            <div class="form-group">
+                <fieldset disabled>
+                    <label for="postId">Nomer Foto</label>
+                    <input id="postId" name="postId" class="form-control disabled" type="text" value="<?= $row->postId ?>">
+                </fieldset>
+                <br/>
+            </div>
             <?php echo "<img src='/images/" . $row->postId . ".png' width='100%'>" ?>
         </div>
 
-        <div class="col-md-5 separate">
-            <form action="/digitalizers/submit" method="POST">
-                <h2 align="center">Masukan Data KTP disini</h2>
-                <br>
-                <table class="table table-responsive">
-                    <tr>
-                        <td><b>Provinsi</b></td>
-                        <td>:</td>
-                        <td><input name="provinsi" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+        <form action="/digitalizers/submit" method="POST">
+            <div class="col-md-3 separate">
+                <div class="form-group">
+                    <label for="provinsi">Provinsi</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">PROVINSI</div>
+                        <input id="provinsi" name="provinsi" required="required" placeholder="" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="kotakabupaten">Kota / Kabupaten</label>
+                    <input id="kotakabupaten" name="kotakabupaten" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Kota / Kabupaten</b></td>
-                        <td>:</td>
-                        <td><input name="kotakabupaten" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="nik">NIK</label>
+                    <input id="nik" name="nik" required="required" placeholder="" class="form-control" type="text" size="16">
+                </div>
 
-                    <tr>
-                        <td width='130px'><b>NIK</b></td>
-                        <td width='20px'>:</td>
-                        <td><input name="nik" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input id="nama" name="nama" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Nama</b></td>
-                        <td>:</td>
-                        <td><input name="nama" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="tempatlahir">Tempat Lahir</label>
+                    <input id="tempatlahir" name="tempatlahir" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Tempat Lahir</b></td>
-                        <td>:</td>
-                        <td><input name="tempatlahir" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="tanggallahir">Tanggal Lahir</label>
+                    <input id="tanggallahir" name="tanggallahir" required="required" placeholder="" class="form-control" type="date">
+                </div>
 
-                    <tr>
-                        <td><b>Tanggal Lahir</b></td>
-                        <td>:</td>
-                        <td><input name="tanggallahir" required="required" placeholder="" class="form-control" type="date"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="jeniskelamin">Jenis Kelamin</label>
+                    <input id="jeniskelamin" name="jeniskelamin" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Jenis Kelamin</b></td>
-                        <td>:</td>
-                        <td><input name="jeniskelamin" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="goldarah">Golongan Darah</label>
+                    <input id="goldarah" name="goldarah" required="required" placeholder="" class="form-control" type="text" size="2">
+                </div>
 
-                    <tr>
-                        <td><b>Golongan Darah</b></td>
-                        <td>:</td>
-                        <td><input name="goldarah" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <input id="alamat" name="alamat" required="required" placeholder="" class="form-control" type="text">
+                </div>
+            </div>
 
-                    <tr>
-                        <td><b>Alamat</b></td>
-                        <td>:</td>
-                        <td><input name="alamat" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+            <div class="col-md-3 separate">
 
-                    <tr>
-                        <td><b>RT</b></td>
-                        <td>:</td>
-                        <td><input name="rt" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="rt">RT</label>
+                    <input id="rt" name="rt" required="required" placeholder="" class="form-control" type="text" size="3">
+                </div>
 
-                    <tr>
-                        <td><b>RW</b></td>
-                        <td>:</td>
-                        <td><input name="rw" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="rw">RW</label>
+                    <input id="rw" name="rw" required="required" placeholder="" class="form-control" type="text" size="3">
+                </div>
 
-                    <tr>
-                        <td><b>Kelurahan / Desa</b></td>
-                        <td>:</td>
-                        <td><input name="desakel" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="desakel">Kelurahan / Desa</label>
+                    <input id="desakel" name="desakel" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Kecamatan</b></td>
-                        <td>:</td>
-                        <td><input name="kecamatan" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="kecamatan">Kecamatan</label>
+                    <input id="kecamatan" name="kecamatan" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Agama</b></td>
-                        <td>:</td>
-                        <td><input name="agama" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="agama">Agama</label>
+                    <input id="agama" name="agama" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Status Perkawinan</b></td>
-                        <td>:</td>
-                        <td><input name="statuskawin" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="statuskawin">Status Perkawinan</label>
+                    <input id="statuskawin" name="statuskawin" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Pekerjaan</b></td>
-                        <td>:</td>
-                        <td><input name="pekerjaan" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <input id="pekerjaan" name="pekerjaan" required="required" placeholder="" class="form-control" type="text">
+                </div>
 
-                    <tr>
-                        <td><b>Kewarganegaraan</b></td>
-                        <td>:</td>
-                        <td><input name="kewarganegaraan" required="required" placeholder="" class="form-control" type="text"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="kewarganegaraan">Kewarganegaraan</label>
+                    <input id="kewarganegaraan" name="kewarganegaraan" required="required" placeholder="" class="form-control" type="text" size="3">
+                </div>
 
-                </table>
-                <br>
-
-                <!-- </fieldset> -->
-                <input type="hidden" name="postId" value="<?= $row->postId ?>">
-                <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit">Kirim</button>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" value="reject">Tolak</button>
-
-            </form>
-        </div>
-        <div class="col-md-1">
-        </div>
+                <button class="btn btn-primary btn-block btn-lg" type="submit" value="submit">Kirim</button>
+            </div>
+        </form>
     </div> <!-- /container -->
 
 
