@@ -17,13 +17,13 @@ class Posters extends CI_Controller {
 		$this->upload();
 	}
 
-  public function base64toimg($base64string){
+  public function base64toimg($base64string, $insert){
     define('UPLOAD_DIR', 'images/');
     $input = str_replace('data:image/jpeg;base64,', '', $base64string);
     $input = str_replace(' ', '+', $base64string);
 
     $data = base64_decode($input);
-    $file = UPLOAD_DIR . 'cobaimage' . '.png';
+    $file = UPLOAD_DIR . $insert . '.png';
 
     return file_put_contents($file, $data);
   }
@@ -32,7 +32,6 @@ class Posters extends CI_Controller {
 	{
 		if(isset($_POST['posterEmail'])){
       $image = $_POST['image'];
-      $this->base64toimg($image);
 
 			$data = array (
 				"posterEmail" => $_POST['posterEmail'],
@@ -41,8 +40,9 @@ class Posters extends CI_Controller {
 			$data["state"] = 'submitted';
 
 			$insert = $this->postsmodel->insert($data);
-			if($insert == true)
+			if($insert > 0)
 			{
+        $this->base64toimg($image, $insert);
 				$info = array(
 					"code" => 200,
 					"status" => 'ok',

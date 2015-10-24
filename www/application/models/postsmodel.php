@@ -20,7 +20,9 @@ class Postsmodel extends CI_Model {
 		$this->postTime = date('Y-m-d H:i:s');
 		$this->state = $data['state'];
 
-		return $this->db->insert('posts', $this);
+    $this->db->insert('posts', $this);
+
+    return $this->db->insert_id();
 	}
 
 }
