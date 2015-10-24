@@ -37,7 +37,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <form class="form-signin" action="/digitalizers/digitize">
-                        <h2 class="form-signin-heading">Login Tim Dijital</h2>
+                        <div style="text-align:center">
+                            <img src="/assets/img/ktp-rame.png" height="70">
+                            <h2 class="form-signin-heading">Login Tim Dijital</h2>
+                        </div>
                         <label for="inputEmail" class="sr-only">Alamat email</label>
                         <input type="email" id="inputEmail" class="form-control" placeholder="Alamat Email" required autofocus>
                         <label for="inputPassword" class="sr-only">Password</label>
