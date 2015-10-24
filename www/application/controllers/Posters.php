@@ -46,7 +46,7 @@ class Posters extends CI_Controller {
 				$info = array(
 					"code" => 200,
 					"status" => 'ok',
-					"message" => 'Proses upload gambar telah berhasil',
+					"message" => 'Proses upload gambar telah berhasil, ID : '. $insert ,
 				);
 				echo json_encode($info);
 			}
