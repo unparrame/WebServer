@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <!-- Bootstrap core CSS -->
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/bootstrap-daterangepicker-master/daterangepicker.css" rel="stylesheet">
         <link href="/assets/css/custom.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
@@ -75,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="form-group">
                     <label for="tanggallahir">Tanggal Lahir</label>
-                    <input id="tanggallahir" name="tanggallahir" required="required" placeholder="" class="form-control" type="date">
+                    <input id="tanggallahir" name="tanggallahir" required="required" placeholder="" class="form-control form_datetime" type="text" data-format="yyyy-MM-dd">
                 </div>
 
                 <div class="form-group">
@@ -143,6 +144,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/bootstrap-daterangepicker-master/moment.js"></script>
+    <script src="/assets/bootstrap-daterangepicker-master/daterangepicker.js"></script>
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    $("#tanggallahir").daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        locale: {
+            format: 'YYYY-MM-DD'
+        }
+    });
+    </script>
 </body>
 </html>
