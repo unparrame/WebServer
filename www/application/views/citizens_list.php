@@ -26,14 +26,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </style>
     </head>
     <body>
+    <body background="/assets/img/LongBackground.jpg">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <table class="table">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>NIK</th>
                                 <th>Nama</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Agama</th>
+                                <th>Gol. Darah</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -42,6 +47,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <tr>
                                     <td><?= $citizen->nik ?></td>
                                     <td><?= $citizen->nama ?></td>
+                                    <td><?= $citizen->jeniskelamin ?></td>
+                                    <td><?= $citizen->agama ?></td>
+                                    <td><?= $citizen->goldarah ?></td>
                                     <td>
                                         <a href="/citizens/detail/?nik=<?= $citizen->nik ?>">
                                             <button type="button" class="btn btn-default" aria-label="Lihat Detail">
@@ -61,6 +69,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h3>Agama</h3>
                     <canvas id="religionChart" width="300" height="200"></canvas>
                     <span id="religionChartLegend"></span>
+                    <h3>Golongan Darah</h3>
+                    <canvas id="goldarahChart" width="300" height="200"></canvas>
+                    <span id="goldarahChartLegend"></span>
                 </div>
             </div>
         </div>
@@ -80,6 +91,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 var religionChartContext = religionChartElement.get(0).getContext("2d");
                 var religionChart = new Chart(religionChartContext).Pie(religionData, {});
                 $("#religionChartLegend").append(religionChart.generateLegend());
+
+                var goldarahData = <?= json_encode($chartjsGolDarah); ?>;
+                var goldarahChartElement = $("#goldarahChart");
+                var goldarahChartContext = goldarahChartElement.get(0).getContext("2d");
+                var goldarahChart = new Chart(goldarahChartContext).Pie(goldarahData, {});
+                $("#goldarahChartLegend").append(goldarahChart.generateLegend());
             });
         </script>
     </body>

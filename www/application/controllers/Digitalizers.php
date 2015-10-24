@@ -27,6 +27,9 @@ class Digitalizers extends CI_Controller {
         $postId = $this->input->post('postId');
         $data = $this->input->post();
         unset($data['postId']);
+        foreach ($data as $key => $value) {
+            $data[$key] = strtoupper($value);
+        }
         $jsonData = json_encode($data);
         $this->db->insert('digitalizations', array(
             'digitalizerEmail' => $digitalizerEmail,
@@ -38,7 +41,7 @@ class Digitalizers extends CI_Controller {
         $this->db->where('data', $jsonData);
         $query = $this->db->get('digitalizations');
         if ($query->num_rows() >= 2) {
-            $this->db->insert('citizens', $data);
+            $this->db->replace('citizens', $data);
             $this->load->view('digitalizers_thankyou', array(
                 'message' => 'Terima kasih! Data sudah terverifikasi dan masuk ke basis data utama'
             ));

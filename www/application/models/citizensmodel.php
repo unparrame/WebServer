@@ -36,6 +36,16 @@ class Citizensmodel extends CI_Model {
         return $jeniskelamins;
     }
 
+    public function chartjsGolDarah() {
+        $query = $this->db->query("SELECT `goldarah` AS `label`, COUNT(`goldarah`) AS `value` FROM `citizens` GROUP BY `goldarah`; ");
+        $goldarahs = array();
+        foreach ($query->result() as $row) {
+            $row->color = $this->generateColor($row->label);
+            $goldarahs[] = $row;
+        }
+        return $goldarahs;
+    }
+    
     private function generateColor($label) {
         return '#' . substr(md5($label), 0, 6);
     }
