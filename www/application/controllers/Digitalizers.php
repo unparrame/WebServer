@@ -44,7 +44,7 @@ class Digitalizers extends CI_Controller {
             $this->db->replace('citizens', $data);
             $this->db->set('state', 'accepted');
             $this->db->where('postId', $postId);
-            $this->update('posts');
+            $this->db->update('posts');
             $this->load->view('digitalizers_thankyou', array(
                 'message' => 'Terima kasih! Data sudah terverifikasi dan masuk ke basis data utama'
             ));
