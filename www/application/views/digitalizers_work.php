@@ -135,7 +135,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <label for="kewarganegaraan">Kewarganegaraan</label>
                     <input id="kewarganegaraan" name="kewarganegaraan" required="required" placeholder="" class="form-control" type="text" size="3">
                 </div>
-
+                <input type="hidden" name="postId" value="<?= $row->postId ?>"/>
                 <button class="btn btn-primary btn-block btn-lg" type="submit" value="submit">Kirim</button>
             </div>
         </form>
