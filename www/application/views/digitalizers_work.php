@@ -33,7 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
     <body background="/assets/img/LongBackground.jpg">
-        <br>
+        <?php $this->load->view('template_header'); ?>
+        <br/>
         <div class="col-md-6 form-inline">
             <div class="form-group">
                 <fieldset disabled>
@@ -61,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="form-group">
                     <label for="nik">NIK</label>
-                    <input id="nik" name="nik" placeholder="" class="form-control" type="text" size="16">
+                    <input id="nik" name="nik" placeholder="" class="form-control" type="text" size="16" required="required">
                 </div>
 
                 <div class="form-group">

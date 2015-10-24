@@ -4,11 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Citizens extends CI_Controller {
 
-    public function __construct()
-    {
-      parent::__construct();
+    public function __construct() {
+        parent::__construct();
 
-      $this->load->model('citizensmodel');
+        $this->load->model('citizensmodel');
     }
 
     public function index() {
@@ -16,7 +15,7 @@ class Citizens extends CI_Controller {
         $this->db->select('nik, nama, jeniskelamin, agama, goldarah');
         $query = $this->db->get('citizens');
         $citizens = array();
-        foreach($query->result() as $row) {
+        foreach ($query->result() as $row) {
             $citizens[] = $row;
         }
         $data = array(
@@ -28,9 +27,10 @@ class Citizens extends CI_Controller {
         $this->load->view('citizens_list', $data);
     }
 
-    public function detail(){
-      $nik = isset($_GET['nik']) ? $_GET['nik'] : "";
-      $data['row'] = $this->citizensmodel->getDetailPeople($nik);
-      $this->load->view('detailview', $data);
+    public function detail() {
+        $nik = isset($_GET['nik']) ? $_GET['nik'] : "";
+        $data['row'] = $this->citizensmodel->getDetailPeople($nik);
+        $this->load->view('citizens_view', $data);
     }
+
 }
