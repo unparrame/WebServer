@@ -16,9 +16,23 @@ class Digitalizers extends CI_Controller {
         } else {
             $row_number = rand(0, $query->num_rows());
             $row = $query->row($row_number);
-            $data['row'] = $row;
+            $data = array('row' => $row);
             $this->load->view('digitalizers_work', $data);
         }
     }
 
+    public function submit() {
+        $nik = $this->input->post('nik');
+        $postId = $this->input->post('postId');
+        unset($_POST['postId']);
+        $data = json_encode($this->input->post());
+        $digitalizerEmail = 'pascalalfadian@live.com'; // TODO sample only!
+        $this->db->insert('digitalizations', array(
+            'digitalizerEmail' => $digitalizerEmail,
+            'postId' => $postId,
+            'data' => $data,
+            'nik' => $nik
+        ));
+        echo 'OK';
+    }
 }
