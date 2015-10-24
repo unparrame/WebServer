@@ -51,47 +51,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <label for="provinsi">Provinsi</label>
                     <div class="input-group">
                         <div class="input-group-addon">PROVINSI</div>
-                        <input id="provinsi" name="provinsi" required="required" placeholder="" class="form-control" type="text">
+                        <input id="provinsi" name="provinsi" placeholder="" class="form-control" type="text">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="kotakabupaten">Kota / Kabupaten</label>
-                    <input id="kotakabupaten" name="kotakabupaten" required="required" placeholder="" class="form-control" type="text">
+                    <input id="kotakabupaten" name="kotakabupaten" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="nik">NIK</label>
-                    <input id="nik" name="nik" required="required" placeholder="" class="form-control" type="text" size="16">
+                    <input id="nik" name="nik" placeholder="" class="form-control" type="text" size="16">
                 </div>
 
                 <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input id="nama" name="nama" required="required" placeholder="" class="form-control" type="text">
+                    <input id="nama" name="nama" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="tempatlahir">Tempat Lahir</label>
-                    <input id="tempatlahir" name="tempatlahir" required="required" placeholder="" class="form-control" type="text">
+                    <input id="tempatlahir" name="tempatlahir" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="tanggallahir">Tanggal Lahir</label>
-                    <input id="tanggallahir" name="tanggallahir" required="required" placeholder="" class="form-control form_datetime" type="text" data-format="yyyy-MM-dd">
+                    <input id="tanggallahir" name="tanggallahir" placeholder="" class="form-control form_datetime" type="text" data-format="yyyy-MM-dd">
                 </div>
 
                 <div class="form-group">
                     <label for="jeniskelamin">Jenis Kelamin</label>
-                    <input id="jeniskelamin" name="jeniskelamin" required="required" placeholder="" class="form-control" type="text">
+                    <input id="jeniskelamin" name="jeniskelamin" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="goldarah">Golongan Darah</label>
-                    <input id="goldarah" name="goldarah" required="required" placeholder="" class="form-control" type="text" size="2">
+                    <input id="goldarah" name="goldarah" placeholder="" class="form-control" type="text" size="2">
                 </div>
 
                 <div class="form-group">
                     <label for="alamat">Alamat</label>
-                    <input id="alamat" name="alamat" required="required" placeholder="" class="form-control" type="text">
+                    <input id="alamat" name="alamat" placeholder="" class="form-control" type="text">
                 </div>
             </div>
 
@@ -99,42 +99,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="form-group">
                     <label for="rt">RT</label>
-                    <input id="rt" name="rt" required="required" placeholder="" class="form-control" type="text" size="3">
+                    <input id="rt" name="rt" placeholder="" class="form-control" type="text" size="3">
                 </div>
 
                 <div class="form-group">
                     <label for="rw">RW</label>
-                    <input id="rw" name="rw" required="required" placeholder="" class="form-control" type="text" size="3">
+                    <input id="rw" name="rw" placeholder="" class="form-control" type="text" size="3">
                 </div>
 
                 <div class="form-group">
                     <label for="desakel">Kelurahan / Desa</label>
-                    <input id="desakel" name="desakel" required="required" placeholder="" class="form-control" type="text">
+                    <input id="desakel" name="desakel" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="kecamatan">Kecamatan</label>
-                    <input id="kecamatan" name="kecamatan" required="required" placeholder="" class="form-control" type="text">
+                    <input id="kecamatan" name="kecamatan" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="agama">Agama</label>
-                    <input id="agama" name="agama" required="required" placeholder="" class="form-control" type="text">
+                    <input id="agama" name="agama" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="statuskawin">Status Perkawinan</label>
-                    <input id="statuskawin" name="statuskawin" required="required" placeholder="" class="form-control" type="text">
+                    <input id="statuskawin" name="statuskawin" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="pekerjaan">Pekerjaan</label>
-                    <input id="pekerjaan" name="pekerjaan" required="required" placeholder="" class="form-control" type="text">
+                    <input id="pekerjaan" name="pekerjaan" placeholder="" class="form-control" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="kewarganegaraan">Kewarganegaraan</label>
-                    <input id="kewarganegaraan" name="kewarganegaraan" required="required" placeholder="" class="form-control" type="text" size="3">
+                    <input id="kewarganegaraan" name="kewarganegaraan" placeholder="" class="form-control" type="text" size="3">
                 </div>
                 <input type="hidden" name="postId" value="<?= $row->postId ?>"/>
                 <button class="btn btn-primary btn-block btn-lg" type="submit" value="submit">Kirim</button>
