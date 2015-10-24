@@ -33,21 +33,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
 
         <div class="container">
-
-            <form class="form-signin" action="/digitalizers/digitize">
-                <h2 class="form-signin-heading">Login Tim Dijital</h2>
-                <label for="inputEmail" class="sr-only">Alamat email</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Alamat Email" required autofocus>
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <form class="form-signin" action="/digitalizers/digitize">
+                        <h2 class="form-signin-heading">Login Tim Dijital</h2>
+                        <label for="inputEmail" class="sr-only">Alamat email</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Alamat Email" required autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me">Ingat saya
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Masuk</button>
+                    </form>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Masuk</button>
-            </form>
-
+                <div class="col-md-4"></div>
+            </div>
         </div> <!-- /container -->
 
 

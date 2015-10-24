@@ -31,10 +31,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
     <body>
+        <?php $this->load->view('template_header'); ?>
 
         <div class="container">
             <p><?= $message ?></p>
-        </div> <!-- /container -->
+            <p>Silahkan kembali ke <a href="/digitalizers/digitize">halaman entri data</a>.
+            </p>
+        </div>
 
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
     <body>
+        <?php $this->load->view('template_header'); ?>
 
         <div class="container">
             <p>Tidak ada data yang harus didijitalisasi saat ini, silahkan beristirahat!</p>

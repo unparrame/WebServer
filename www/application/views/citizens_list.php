@@ -25,9 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
         </style>
     </head>
-    <body>
     <body background="/assets/img/LongBackground.jpg">
-
+        <?php $this->load->view('template_header'); ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
