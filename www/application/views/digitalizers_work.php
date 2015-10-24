@@ -136,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <tr>
                         <td><b>Status Perkawinan</b></td>
                         <td>:</td>
-                        <td><input name="statusperkawinan" required="required" placeholder="" class="form-control" type="text"></td>
+                        <td><input name="statuskawin" required="required" placeholder="" class="form-control" type="text"></td>
                     </tr>
 
                     <tr>

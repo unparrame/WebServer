@@ -22,17 +22,30 @@ class Digitalizers extends CI_Controller {
     }
 
     public function submit() {
+        $digitalizerEmail = 'pascalalfadian@live.com'; // TODO sample only!
         $nik = $this->input->post('nik');
         $postId = $this->input->post('postId');
-        unset($_POST['postId']);
-        $data = json_encode($this->input->post());
-        $digitalizerEmail = 'pascalalfadian@live.com'; // TODO sample only!
+        $data = $this->input->post();
+        unset($data['postId']);
+        $jsonData = json_encode($data);
         $this->db->insert('digitalizations', array(
             'digitalizerEmail' => $digitalizerEmail,
             'postId' => $postId,
-            'data' => $data,
+            'data' => $jsonData,
             'nik' => $nik
         ));
-        echo 'OK';
+        $this->db->where('postId', $postId);
+        $this->db->where('data', $jsonData);
+        $query = $this->db->get('digitalizations');
+        if ($query->num_rows() >= 2) {
+            $this->db->insert('citizens', $data);
+            $this->load->view('digitalizers_thankyou', array(
+                'message' => 'Terima kasih! Data sudah terverifikasi dan masuk ke basis data utama'
+            ));
+        } else {
+            $this->load->view('digitalizers_thankyou', array(
+                'message' => 'Terima kasih! Data akan masuk setelah terverifikasi sekali lagi'
+            ));
+        }
     }
 }
