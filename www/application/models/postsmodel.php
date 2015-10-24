@@ -7,7 +7,6 @@ if (!defined('BASEPATH'))
 class Postsmodel extends CI_Model {
 	public $posterEmail;
 	public $state;
-	public $image;
 	public $postTime;
 
 	public function __construct()
@@ -20,7 +19,6 @@ class Postsmodel extends CI_Model {
 		$this->posterEmail = $data['posterEmail'];
 		$this->postTime = date('Y-m-d H:i:s');
 		$this->state = $data['state'];
-		$this->image = $data['image'];
 
 		return $this->db->insert('posts', $this);
 	}
