@@ -16,7 +16,7 @@ class Citizensmodel extends CI_Model {
     }
 
     public function getHistoryPeople($nik) {
-        $sql = "SELECT * FROM POSTS WHERE postId=(SELECT DISTINCT postId FROM digitalizations WHERE nik=?)";
+        $sql = "SELECT * FROM POSTS WHERE postId IN (SELECT DISTINCT postId FROM digitalizations WHERE nik=?)";
         $query = $this->db->query($sql, array($nik));
         $posts = array();
         foreach ($query->result() as $row) {

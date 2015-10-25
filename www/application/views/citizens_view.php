@@ -156,6 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="media-body">
                         <h4><?= $post->posterEmail ?></h4>
                         <p><?= $post->postTime ?></p>
+                        <p><i><?= $post->state ?></i></p>
                     </div>
                 </div>
             <?php endforeach; ?>
