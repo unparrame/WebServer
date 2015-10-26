@@ -34,8 +34,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="container">
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
                     <form class="form-signin" action="/digitalizers/digitize">
                         <div style="text-align:center">
                             <img src="/assets/img/ktp-rame.png" height="70"><br><br>
@@ -51,8 +51,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">Masuk</button>
                     </form>
+                    <br/>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Cara Penggunaan</h3>
+                        </div>
+                        <div class="panel-body">
+                            Ini adalah sistus web demonstrasi KTPRame. Untuk mencoba menggunakannya, ikuti langkah-langkah berikut:
+                            <ol>
+                                <li>Unduh aplikasi <a href="https://github.com/unparrame/Android/releases/download/v0.1-alpha/android-debug.apk">KTPRame Android</a> dan pasang di Android Anda</li>
+                                <li>Jalankan, dan login dengan user/password apapun (tidak dicek)</li>
+                                <li>Ambil foto formulir pembuatan KTP (atau apapun, contoh saja) dan upload</li>
+                                <li>Di <a href="http://ktprame.azurewebsites.net/" target="_blank">situs ini</a>, login dengan user/password apapun (tidak dicek)</li>
+                                <li>Anda akan melihat secara acak hasil foto, termasuk mungkin saja yang baru saja Anda foto</li>
+                                <li>Anda dapat langsung mencoba mengetikkan (dijitalisasi) datanya, atau melihat hasil analisis di menu "Analisis"</li>
+                            </ol>
+                            Kode sumber dapat dilihat pada <a href="http://github.com/unparrame" target="_blank">http://github.com/unparrame</a>.
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-3"></div>
             </div>
         </div> <!-- /container -->
 
